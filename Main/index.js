@@ -18,7 +18,7 @@ function showMainPrompts() {
       { name: "Show All Departments", value: "SHOW_DEPARTMENTS" },
       { name: "Add Department", value: "ADD_DEPARTMENT" },
       { name: "Quit", value: "QUIT" }
-    ];
+    ]
   
     prompt({
       type: "list",
@@ -29,9 +29,49 @@ function showMainPrompts() {
       let selection = res.selection;
       if (selection === "SHOW_EMPLOYEES"){
         showEmployees();
-      }
+      } else if (selection === "ADD_EMPLOYEE") {
+        addEmployee();
+      } else if (selection === "UPDATE_EMPLOYEE_ROLE") {
+      updateEmployeeRole();
+      } else if (selection === "SHOW_ROLES") {
+        showRoles();
+      } else if (selection === "ADD_ROLE") {
+        addRole();
+      } else if (selection === "SHOW_DEPARTMENTS") {
+        showDepartments();
+      } else if (selection === "ADD_DEPARTMENT") {
+        addDepartment();
+      } else {
+        quit();
+    }
 
-    });
+    }
+    )
+  } 
+
+  function showEmployees() {
+    db.findAllEmployees()
+      .then(([rows]) => {
+        let employees = rows;
+        console.log("\n");
+        console.table(employees);
+      })
+      .then(() => showMainPrompts());
   }
+  
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+  
 
 
