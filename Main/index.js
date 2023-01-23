@@ -25,7 +25,13 @@ function showMainPrompts() {
       name: "selection",
       message: "Make a selection",
       choices
+    }).then(res => {
+      let selection = res.selection;
+      if (selection === "SHOW_EMPLOYEES"){
+        showEmployees();
+      }
+
     });
   }
-  
+
 
