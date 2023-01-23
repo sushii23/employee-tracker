@@ -21,14 +21,14 @@ VALUES
 
 INSERT INTO employee (last_name, first_name, role_id, manager_id)
 VALUES
-   ("")
-   ("")
-   ("")
-   ("")
-   ("")
-   ("")
-   ("")
-   ("")
+   ("Mason","Brick",0,NULL)
+   ("Madden","Steve",1,8)
+   ("Hill","Tommy",2,2)
+   ("Carter","Jimmy",3,NULL)
+   ("Johnson","Bobby",4,NULL)
+   ("Smith","Eddie",5,NULL)
+   ("Blackson","Micheal",6,4)
+   ("Jenkins","Leroy",7,6)
   
    
    
